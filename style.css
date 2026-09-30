@@ -1,30 +1,40 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth; /* Faz a rolagem ser suave ao clicar nos links */
+}
+
 body {
-    font-family: 'Poppins';
+    font-family: 'Poppins', sans-serif;
     font-size: 22px;
+    background-color: rgb(7, 3, 27);
 }
 
 .tela {
     display: flex;
+    flex-direction: column;
     width: 100%;
-    min-height: 100vh;
-    justify-content: center;
     align-items: center;
-    background-color: rgb(7, 3, 27);
 }
 
 .header {
     display: flex;
     width: 100%;
     height: 60px;
-    background-color: rgb(43, 36, 78);
+    background-color: rgb(4, 43, 148);
     border-bottom-left-radius: 45px;
     border-bottom-right-radius: 45px;
     justify-content: space-around;
-    flex-direction: row;
+    align-items: center;
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 100;
+    z-index: 1000;
+    text-decoration: none;
 }
 
 h2 {
@@ -32,64 +42,109 @@ h2 {
     margin: 5px;
 }
 
+a {
+    text-decoration: none;
+    color: white;
+    font-size: 30px;
+    transition: color 0.3s ease;
+}
+
 .container1 {
     display: flex;
+    flex-direction: column;
     background-color: rgb(7, 3, 27);
-    width: 70%;
-    height: 100vh;
-    border-top-left-radius: 16px;
-    border-top-right-radius: 16px;
-    margin: 160px;
+    width: 80%;
+    min-height: 100vh;
+    margin-top: 80px; 
     justify-content: center;
     align-items: center;
     position: relative;
 }
 
-/* Ajuste na logo para permitir a perspectiva 3D */
-.logo {
-    position: absolute;
-    top: 15px;
-    right: 20px; /* Ajuste a posição de acordo com o seu layout */
-    color: white;
-    perspective: 1000px; /* Cria profundidade 3D */
-    cursor: pointer;
-}
-
-.logo img {
-    height: 300px;
-    width: 300px;
-    transition: transform 0.1s ease-out; /* Transição suave do movimento */
-    transform-style: preserve-3d;
-}
-
-h1 {
-    position: absolute;
-    top: -35px;
-    left: 130px;
-}
-
 .background {
     border-top-left-radius: 16px;
     border-top-right-radius: 16px;
-    height: 85vh;
-    margin-top: 140px;
+    height: 70vh;
     width: 100%;
+
+}
+
+
+.logo {
+    position: absolute;
+    top: 20px;
+    right: -140px;
+    z-index: 20;
+    perspective: 1000px;
+}
+
+.logo img {
+    height: 320px;
+    width: 320px;
+    transition: transform 0.1s ease-out;
+}
+
+.conteudo-texto {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 90%;
+    z-index: 10; 
 }
 
 p.um {
-    position: absolute;
     color: white;
-    margin-top: -250px;
-    font-size: 40px;
+    font-size: 36px;
+   
 }
 
 p.dois {
-    position: absolute;
     color: white;
-    margin-top: 450px;
+    font-size: 20px;
+    margin-top: 290px;
 }
 
 span {
-    color: white;
+    color: #145EFF;
     font-weight: bold;
+}
+
+.container2 {
+    background-color: white;
+    min-height: 100vh; 
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    padding-top: 100px;
+    padding-left: 150px;
+}
+
+h2.equipe{
+    color: black;
+    font-size: 70px;
+}
+
+.equipe-lista {
+    display: flex;
+    flex-direction: column;
+    padding-left: 20px;
+    padding-top: 150px;
+    justify-content: space-evenly;
+}
+li{
+    font-size: 30px;
+    color: black;
+    margin: 20px;
+}
+
+.integrantes{
+    margin-left: 10px;
+    width: 250px;
+    height: auto;
+    margin-top: 50px;
+    margin-bottom: 150px;
+    border-radius: 150px;
 }

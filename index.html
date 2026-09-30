@@ -6,36 +6,69 @@
     <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alves Studio</title>
+    <title>GFIG</title>
 </head>
 
 <body>
+
+    <!-- 1. Ponto de referência fixo no topo real da página -->
+    <div id="topo"></div>
+
     <div class="header">
-        <h2>Home</h2>
-        <h2>Equipe</h2>
+        <!-- 2. Aponta para o #topo -->
+        <h2><a href="#topo">Home</a></h2>
+        <h2><a href="#container2">Equipe</a></h2>
         <h2>Sobre nós</h2>
         <h2>Entrar em Contato</h2>
     </div>
 
     <div class="tela">
+
         <div class="container1">
-            <img class="background" src="gifinho.gif" alt="">
-            
-            <!-- Logo ajustada para receber o efeito -->
+            <img class="background" src="gifinho.gif" alt="Background">
+
             <div class="logo" id="logoCard">
-                <img src="02_emblema-removebg-preview.png" alt="Emblema Alves Studio"> 
+                <img src="02_emblema-removebg-preview.png" alt="Logo">
             </div>
 
-            <p class="um">Projetando o <span>futuro</span> da engenharia <br>aeroespacial a partir de <span>Gaspar</span>.</p>
-            <p class="dois">Transformamos ciência em tecnologia aeroespacial de alto impacto.</p>
+            <div class="conteudo-texto">
+                <p class="um">Projetando o <span>futuro</span> da engenharia <br>aeroespacial a partir de <span>Gaspar</span>.</p>
+                <p class="dois">Transformamos ciência em tecnologia aeroespacial de alto impacto.</p>
+            </div>
         </div>
 
-        <div class="container2"></div>
-        <div class="container3"></div>
-        <div class="container4"></div>
+        <div class="container2" id="container2">
+            <h2 class="equipe">Equipe.</h2>
+            <ul class="equipe-lista">
+                <li>
+                    <p>Romulo. O gatao</p>
+                    <img class="integrantes" src="03_camiseta.png" alt="Romulo">
+                </li>
+
+                <li>
+                    <p>Henrrique. O q namora a Joana</p>
+                    <img class="integrantes" src="03_camiseta.png" alt="Henrique">
+                </li>
+
+                <li>
+                    <p>Sarah. A enjoada</p>
+                    <img class="integrantes" src="03_camiseta.png" alt="Sarah">
+                </li>
+
+                <li>
+                    <p></p>Mauricio. MauMau</p>
+                    <img class="integrantes" src="03_camiseta.png" alt="Mauricio">
+                </li>
+
+                <li>
+                    <p>Rauta. O cara da Receita Federal</p>
+                    <img class="integrantes" src="03_camiseta.png" alt="Rauta">
+                </li>
+            </ul>
+        </div>
+
     </div>
 
-    <!-- Script JavaScript para o efeito interativo -->
     <script src="script.js"></script>
 </body>
 
